@@ -32,12 +32,12 @@ DDPG uses an **actor-critic** architecture, where the actor is responsible for s
 
 It employs **target networks** for both the actor and the critic. These target networks are updated slowly (using soft updates) to stabilize learning. The target networks are used to compute the target Q-values, which helps in reducing variance in the updates.
 
-The neural networks are implemented in the `model.py` file which can be found [here](https://github.com/yijun-deng/DRL_P1_Navigation/blob/main/model.py#L5). The following figures shows the structure of the 2 neural networks (actor and critic) respectively:
+The neural networks are implemented in the `model.py` file which can be found [here](https://github.com/yijun-deng/DRL_P3_MultiAgent_Tennis/blob/main/model.py#L5). The following figures shows the structure of the 2 neural networks (actor and critic) respectively:
 
 <img src="image/nn_actor.png" width="50%" align="top-left" alt="" title="actor" />
 <img src="image/nn_critic.png" width="50%" align="top-left" alt="" title="critic" />
 
-As the 2 agents need to cooperate with each other to gain maximum rewards, a special approach with **centralized training** and **de-centralized execution** has been implemented, which means that each agent has its own actor network to select actions and the 2 agents share the same critic network to evaluate the state-action pair. This Multi-Agent DDPG algorithm has been implemented in the `ddpg_agent.ipynb` file which can be found [here](https://github.com/yijun-deng/DRL_P1_Navigation/blob/main/model.py#L5).
+As the 2 agents need to cooperate with each other to gain maximum rewards, a special approach with **centralized training** and **de-centralized execution** has been implemented, which means that each agent has its own actor network to select actions and the 2 agents share the same critic network to evaluate the state-action pair. This Multi-Agent DDPG algorithm has been implemented in the `ddpg_agent.ipynb` file which can be found [here](https://github.com/yijun-deng/DRL_P3_MultiAgent_Tennis/blob/main/ddpg_agent.py#L5).
 
 ### 2.2 Exploration and Exploitation
 
